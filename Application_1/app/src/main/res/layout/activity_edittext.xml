@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--帳號-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帳號："
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text=""
+            android:hint="請輸入帳號"
+            android:textColor="#9B6FE6"
+            android:textColorHint="#44F4E3"
+            android:textColorHighlight="#7FBF55"
+            android:textScaleX="1.5"
+            android:typeface="sans"
+            android:inputType="text"
+            />
+
+        <!--Text通常留空，因為要把輸入的值帶入-->
+        <!--hint通常放"提示資訊"-->
+
+    </LinearLayout>
+
+<!--密碼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密碼："
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text=""
+            android:hint="請輸入密碼"
+            android:textColor="#9B6FE6"
+            android:textColorHint="#5F73E7"
+            android:textColorHighlight="#7FBF55"
+            android:typeface="sans"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_frame"
+            />
+
+        <!--Text通常留空，因為要把輸入的值帶入-->
+        <!--hint通常放"提示資訊"-->
+
+    </LinearLayout>
+
+<!--清除&離開-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Login"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign"
+            android:layout_weight="1"
+            />
+
+<!--        layout_weight 都是1，所以代表是在平分畫面寬度，如果是三個，就是三個均分-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+<!--        透過layout_gravity，將整個LinearLayout置中-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave"
+            />
+
+    </LinearLayout>
+</LinearLayout>

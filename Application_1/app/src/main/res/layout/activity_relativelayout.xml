@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    【relativelayout】
+            1. 並沒有先寫先顯示，與linearlayout不同 (顯示順序 跟 撰寫順序無關)
+            2. 以相對位置標示位置，所以需要知道id  @id/tv (知道相對於哪一個指定的標的_
+             @[資源類別]/[識別名稱]
+             @+  指要建立一個資源(EX：定義id) -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_01"
+        android:text="按鈕1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+
+        />
+<!--    "@+id/button_01"  把這個Button命名成button_01-->
+<!--    位置描述語法：layout_alignParentBottom 這個按鈕要對準父類別容器的底部-->
+<!--               layout_alignParentLeft 對準父容器的左邊-->
+
+<!--    以下兩個 TextView 沒有撰寫位置的語法，所以兩個會被重疊再一起 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_relative01"
+        android:text="RelativeLayout 相對布局練習"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_relative02"
+        android:text="1111111"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext_id"
+        android:hint="請輸入帳號"
+        android:text=""
+        android:ems="14"
+        android:inputType="text"
+        android:textColorHint="#53E4D9"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/button_01"
+        />
+<!--    layout_above 放在相對於誰(叫用id >> @id/button_01)的位置之上 (讓自己的底部，放在被叫到的id的組件上方)-->
+
+<!--    <EditText-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/edittext_id2"-->
+<!--        android:hint="請輸入帳號"-->
+<!--        android:text=""-->
+<!--        android:ems="14"-->
+<!--        android:inputType="text"-->
+<!--        android:textColorHint="#CE9DE4"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_below="@id/textview_relative01"-->
+<!--        />-->
+
+<!--    用整個 LinearLayout 包起來，去一起指定位置-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lineayout_01"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textview_relative01"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_star_01"
+            android:src="@android:drawable/btn_star_big_on"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_star_02"
+            android:src="@android:drawable/btn_star_big_off"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_star_03"
+            android:src="@android:drawable/btn_dialog"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_check_01"
+        android:src="@drawable/checked"
+        android:layout_above="@id/edittext_id"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_uncheck_01"
+        android:src="@drawable/unchecked"
+        android:layout_above="@id/image_check_01"
+        android:layout_toLeftOf="@id/image_check_01"
+        />
+<!--    layout_toLeftOf 有可能組合起來會呈現「左上」的樣子-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_check02"
+        android:src="@drawable/checked"
+        android:layout_below="@id/image_uncheck_01"
+        android:layout_toLeftOf="@id/image_uncheck_01"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_uncheck_02"
+        android:src="@drawable/unchecked"
+        android:layout_below="@id/image_check02"
+        android:layout_toRightOf="@id/image_check02"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_02"
+        android:text="按鈕2"
+        android:layout_below="@id/edittext_id"
+        android:layout_toRightOf="@id/button_01"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_03"
+        android:text="按鈕3"
+        android:layout_above="@id/edittext_id"
+        android:layout_alignRight="@id/button_01"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_04"
+        android:text="按鈕4"
+        android:layout_above="@id/edittext_id"
+        android:layout_alignLeft="@id/button_02"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_05"
+        android:text="按鈕5"
+        android:layout_alignTop="@id/lineayout_01"
+        android:layout_toRightOf="@id/lineayout_01"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_06"
+        android:text="按鈕6"
+        android:layout_alignBottom="@id/button_05"
+        android:layout_toRightOf="@id/button_05"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_center"
+        android:text="中央按鈕"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_password"
+        android:text="密碼："
+        android:textSize="16sp"
+        android:layout_below="@id/button_05"
+        android:layout_alignParentLeft="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext_password"
+        android:text=""
+        android:hint="請輸入密碼"
+        android:textColorHint="#DA9DE6"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/textview_password"
+        android:layout_alignBaseline="@id/textview_password"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <!-- 參考線：上下左右 -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom_5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="5dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="5dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="10dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="10dp" />
+
+        <!-- 顯示文字 "帳號 : " -->
+        <TextView
+            android:id="@+id/text_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帳號 : "
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/guideline_top_10dp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start_10dp" />
+
+        <!-- 輸入框（密碼提示，對齊基準線） -->
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="請輸入帳號"
+            android:textColorHint="#FF0000"
+            android:textSize="16sp"
+            android:ems="14"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_account"
+            app:layout_constraintStart_toEndOf="@id/text_account"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 按鈕群：取消、下一步、上一步、左上、右上 -->
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            app:layout_constraintStart_toEndOf="@id/button_cancel"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/button_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一步"
+            app:layout_constraintStart_toStartOf="@id/button_next"
+            app:layout_constraintBottom_toTopOf="@id/button_next" />
+
+        <Button
+            android:id="@+id/button_upper_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左上"
+            app:layout_constraintEnd_toStartOf="@id/button_next"
+            app:layout_constraintBottom_toTopOf="@id/button_next" />
+
+        <Button
+            android:id="@+id/button_upper_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右上"
+            app:layout_constraintStart_toEndOf="@id/button_next"
+            app:layout_constraintBottom_toTopOf="@id/button_next" />
+
+        <!-- 正中央按鈕 -->
+        <Button
+            android:id="@+id/button_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="置中按鈕"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 中上30% -->
+        <Button
+            android:id="@+id/button_top30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中上30%"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <!-- 左上 20% -->
+        <Button
+            android:id="@+id/button_upperLeft20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左上20%"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.2" />
+
+        <!-- 右下 75% -->
+        <Button
+            android:id="@+id/button_lowerRight75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右下75%"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.75"
+            app:layout_constraintHorizontal_bias="0.75" />
+
+        <!-- 使用參考線定位的右下按鈕 -->
+        <Button
+            android:id="@+id/button_guideline_anchor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="參考線定位"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end_5dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_bottom_5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

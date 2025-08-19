@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 授權外部儲存裝置讀寫-->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>  <!--    使用GPS做定位(精確位置)-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Application_1"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".activity_GPS"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Button_java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Textview_java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_ImageView_java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_OnTouch_Java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Edittext_Java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_KeyListener_Java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_NumberKeyListener_Java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Checkbox_Java"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Radiobutton_Java"
+            android:exported="false"/>
+        <activity
+            android:name=".activity_MRT"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

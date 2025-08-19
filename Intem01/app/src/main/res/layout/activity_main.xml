@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-= 這是主畫面 =-"
+        android:id="@+id/textview_01"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_01"
+        android:text="啟動活動(Activity)畫面二"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textview_01"
+        app:layout_constraintTop_toBottomOf="@id/textview_01"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_02"
+        android:text="啟動活動(Activity)畫面三"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/button_01"
+        app:layout_constraintTop_toBottomOf="@id/button_01"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_03"
+        android:text="變更顯示狀態"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/button_02"
+        app:layout_constraintTop_toBottomOf="@id/button_02"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_group_1"
+        android:visibility="visible"
+        app:constraint_referenced_ids="textview_01,button_01,button_02"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
