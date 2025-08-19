@@ -1,3 +1,3 @@
-H:\06_APP\sdk\emulator\emulator.exe -avd Nexus_S_API_33 -gpu host
+C:\Users\user\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Nexus_S -gpu host
 
 pause
