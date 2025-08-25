@@ -8,19 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textview_01"
+        android:id="@+id/taipei_sport_center_textview_title"
         android:gravity="center"
         android:textSize="28sp"
-        android:text="高雄捷運站資料"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textview_02"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:text=""
+        android:text="台北市運動中心資料"
         />
 
     <LinearLayout
@@ -31,7 +22,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_01"
+            android:id="@+id/taipei_sport_center_button_get_data"
             android:text="讀取資料"
             android:layout_weight="1"
             />
@@ -39,7 +30,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_02"
+            android:id="@+id/taipei_sport_center_button_clear_data"
             android:text="清除資料"
             android:layout_weight="1"
             />
@@ -49,7 +40,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Listview_01"
+        android:id="@+id/taipei_sport_center_listview_apidata"
         />
 
 </LinearLayout>
